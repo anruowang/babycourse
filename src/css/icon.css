@@ -1,0 +1,76 @@
+.icon22x22, .profit-icon, .profit-icon-active, .active .profit-icon, .shop-icon, .shop-icon-active, .active .shop-icon, .my-icon, .my-icon-active, .active .my-icon, .set-icon, .set-icon-active, .active .set-icon, .cpbg-icon, .wdkc-icon, .wdsc-icon, .wdgz-icon, .wdqd-icon {
+  display: block;
+  width: 0.22rem;
+  height: 0.22rem;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.profit-icon {
+  background-image: url("../assets/houyeweixuanhzong@2x.png"); }
+
+.profit-icon-active, .active .profit-icon {
+  background-image: url("../assets/shouyexuanzhong@2x.png"); }
+
+.shop-icon {
+  background-image: url("../assets/xiaosishuweixuanzhong@2x.png"); }
+
+.shop-icon-active, .active .shop-icon {
+  background-image: url("../assets/xiaosishuxuanzhong@2x.png"); }
+
+.my-icon {
+  background-image: url("../assets/qinzikeweixuanhzong@2x.png"); }
+
+.my-icon-active, .active .my-icon {
+  background-image: url("../assets/qingzikexuanzhong@2x.png"); }
+
+.set-icon {
+  background-image: url("../assets/wodeweixhuanzhong@2x.png"); }
+
+.set-icon-active, .active .set-icon {
+  background-image: url("../assets/wodexuanzhong@2x.png"); }
+
+.cpbg-icon {
+  background-image: url("../assets/cepingbaogao@2x.png"); }
+
+.wdkc-icon {
+  background-image: url("../assets/wodekecheng@2x.png"); }
+
+.wdsc-icon {
+  background-image: url("../assets/wodeshoucang@2x.png"); }
+
+.wdgz-icon {
+  background-image: url("../assets/wodeguanzhu@2x.png"); }
+
+.wdqd-icon {
+  background-image: url("../assets/wodeqiandao@2x.png"); }
+
+.coll-icon {
+  color: #b1b1b1;
+  float: left; }
+  .coll-icon:before {
+    content: '';
+    width: 0.18rem;
+    height: 0.18rem;
+    display: block;
+    margin: auto;
+    background: url("../assets/not_coll.png") no-repeat;
+    background-size: 100%; }
+  .coll-icon.iscoll:before {
+    background: url("../assets/is_coll.png") no-repeat;
+    background-size: 100%; }
+
+.goumai-sub {
+  width: 0.19rem;
+  height: 0.19rem;
+  background: url("../assets/goumaizhuanlangougou@2x.png") no-repeat center;
+  background-size: 100% 100%;
+  display: inline-block;
+  vertical-align: middle; }
+
+.audio-length {
+  background: url("../assets/shijian@2x.png") no-repeat left center;
+  background-size: 0.12rem 0.12rem;
+  padding-left: 0.18rem;
+  color: #999; }
+
+/*# sourceMappingURL=icon.css.map */

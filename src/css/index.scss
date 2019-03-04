@@ -1,0 +1,550 @@
+@charset "utf-8";
+@import "public";
+@import "login";
+@import "column_style";
+@import "player";
+.userInfo{
+    color: #fff;
+    position: relative;
+    height: 2.2rem;
+}
+.head-top{
+    background-color: rgba(255,255,255,0.2);
+    padding: 0 0.12rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    line-height: 0.2rem;
+    z-index: 1;
+    font-size: 0.11rem;
+    a{
+        @include link-hover(#fff,#fff)
+    }
+    .icon-laba{
+        font-size: 0.12rem;
+        vertical-align: middle;
+    }
+}
+
+.userInfo-item{
+    height: 2.2rem;
+    background-color: $color;
+    color: #fff;
+    position: relative;
+    .icon-message{
+        font-size: 0.2rem;
+        color: #fff;
+        position: absolute;
+        top:0.3rem;
+        right:0.2rem;
+        z-index: 1;
+        .nums{
+            width: 0.16rem;
+            height: 0.16rem;
+            line-height: 0.16rem;
+            font-size: 0.11rem;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            top:-0.04rem;
+            right: -0.08rem;
+            z-index: 2;
+            border-radius: 50%;
+            background-color:#ec0606;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    .myself{
+        padding-top: 0.5rem;
+        text-align:center;
+        .avatar{
+            width: 0.6rem;
+            height: 0.6rem;
+            display: block;
+            margin: auto;
+        }
+        .name{
+            font-size: 0.16rem;
+        }
+        .grade{
+            font-size: 0.12rem;
+            vertical-align:middle;
+            line-height: 0.2rem;
+            margin-top: 0.05rem;
+            .tag{
+                display: inline-block;
+                height: 0.2rem;
+                line-height: 0.18rem;
+                border-radius: 0.15rem;
+                border:1px solid #fff;
+                padding: 0 0.06rem;
+            }
+
+        }
+    }
+
+    .visitInfo{
+        width: 3.50rem;
+        height: 0.72rem;
+        position: absolute;
+        bottom:-0.36rem;
+        left: 0.125rem;
+        z-index: 3;
+        background-color: #fff;
+        border-radius: 0.05rem;
+        box-shadow: 0 0.02rem 0.1rem rgba(5,143,252,0.1);
+        font-size: 0;
+        padding:0.18rem 0;
+        li {
+            width: 50%;
+            font-size: 0.12rem;
+            display: inline-block;
+            position: relative;
+            padding: 0 0.3rem;
+            height:0.36rem;
+            &:first-child {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: $grayBorder;
+                    z-index: 10;
+                }
+            }
+
+            .visit-iconbox{
+                width:0.4rem;
+                line-height: 0.36rem;
+                text-align: left;
+
+                .icon-fangwen,.icon-fangwenrenshu{
+                    font-size: 0.2rem;
+                    color: $color;
+                }
+                .icon-fangwenrenshu{
+                    font-size: 0.24rem;
+                }
+
+            }
+            .visit-data{
+                line-height: 0.18rem;
+                h5{
+                    font-size: 0.14rem;
+                    color: #666;
+                }
+                p{
+                    color: #999;
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+.menuSwiper {
+    min-height: 2.4rem;
+    .swiper-slide {
+        padding: 0 0.1rem;
+        font-size: 0;
+        .menu-col {
+            width: 0.88rem;
+            height: 0.6rem;
+            text-align: center;
+            font-size: 0.14rem;
+            display: inline-block;
+            line-height: 0.3rem;
+            margin: 0.2rem auto;
+            @include link-hover(#666, #333);
+            .iconfont {
+                color: $color;
+                display: block;
+                height: 0.3rem;
+                line-height: 0.3rem;
+                font-size: 0.3rem;
+            }
+        }
+    }
+    .swiper-pagination{
+        width: 100%;
+        bottom:0.1rem;
+        .swiper-pagination-bullet{
+            width: 0.06rem;
+            height: 0.06rem;
+            margin: 0 0.03rem;
+        }
+    }
+}
+
+//首页
+.listItem{
+    .knowledge{
+        .kpic{
+            width:1.36rem;
+        }
+    }
+    padding:0.14rem 0.15rem 0;
+    color: #666666;
+    .link,.link:hover{
+      color: #666666;
+    }
+    .title{
+        font-size: 0.22rem;
+        padding:0.2rem 0;
+    }
+    .kpic{
+        width:1.45rem;
+        position: relative;
+        img{
+           width: 1rem;
+            height: 0.6rem;
+            border-radius:0.04rem;
+        }
+        .liveicon{
+            background-color: rgba(0,0,0,.4);
+            color: #fff;
+            font-size: 0.1rem;
+            position: absolute;
+            right: 0.04rem;
+            top: 0.12rem;
+            width: 0.32rem;
+            line-height: 0.14rem;
+            height: 0.14rem;
+            text-align: center;
+            border-radius: 0.07rem;
+        }
+        .livetime{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: $bgyellow;
+            height: 0.15rem;
+            line-height:0.15rem;
+            color: #fff;
+            font-size: 0.1rem;
+        }
+    }
+
+    .knowledgedetails{
+        &>div{
+            font-size: 0.14rem;
+            line-height: 0.22rem;
+            width: 100%;
+            height: 0.22rem;
+            @include text-ellipsis;
+        }
+        width: 2.09rem;
+        .icon-play{
+            width: 0.22rem;
+            height: 0.14rem;
+            background: url("../assets/huisezantifg@2x.png") no-repeat;
+            background-size: cover;
+            float: left;
+            margin-right: 0.1rem;
+            margin-top:0.04rem;
+        }
+        .icon-pause{
+            width: 0.22rem;
+            height: 0.14rem;
+            background: url("../assets/huisebofang@2x.png") no-repeat;
+            background-size: cover;
+            float: left;
+            margin-right: 0.1rem;
+            margin-top:0.04rem;
+        }
+    }
+    .playbtn{
+        padding:0.14rem 0;
+        .allplay{
+            width: 0.86rem;
+            height: 0.22rem;
+            background:url(../assets/bofangquanbu@2x.png);
+            background-size: cover;
+        }
+        .more{
+            padding-right:0.14rem;
+            background:url(../assets/gengduo@2x.png) no-repeat right center;
+            background-size: 0.12rem 0.12rem;
+            color: #999;
+            font-size: 0.14rem;
+            line-height: 0.22rem;
+        }
+    }
+    .gametime{
+        border-radius: 0.04rem;
+        height: 1.22rem;
+        margin-bottom:0.2rem;
+        padding:0.1rem;
+        align-items: flex-start;
+        background-color: #fff;
+            border: 1px solid #f4f4f4;
+        .kpic{
+            img{
+                width: 1.45rem;
+                height: 1.02rem;
+                border-radius: 0.05rem;
+            }
+        }
+        .gamedetails{
+            padding-left: 0.1rem;
+            width:1.8rem;
+            height: 1.02rem;
+            position: relative;
+            .item{
+                color: #333;
+                font-size: 0.16rem;
+                @include text-ellipsis;
+                &.itemcourse{
+                    height: 0.4rem;
+                    white-space: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    -webkit-line-clamp: 2;
+                }
+            }
+            .itembtn{
+                display: inline-block;
+                height: 0.14rem;
+                color: #fff;
+                border-radius: 0.07rem;
+                text-align: center;
+                font-size: 0.10rem;
+                margin: 0.1rem 0.08rem 0.1rem 0;
+                background-color: #fff;
+                padding:0 0.06rem;
+                &.itembtnp0{
+                    background-color: rgba(254, 209, 58, 0.2);
+                    color: #fed13a;
+                }
+            }
+            .iteminfo{
+                position: absolute;
+                bottom: 0;
+                left: 0.1rem;
+                .iteminfo_hidden{
+                    color: #666666;
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    -webkit-line-clamp: 2;
+                    max-height: 0.32rem;
+                }
+            }
+        }
+    }
+    .price{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 1.7rem;
+        line-height: 0.2rem;
+        .studycount{
+            background:url(../assets/xuexixiaobiao@2x.png) no-repeat left center;
+            padding-left:0.18rem;
+            background-size:0.12rem 0.12rem;
+            color:#999;
+        }
+        .money{
+            color: $red;
+            font-size: 0.12rem;
+        }
+    }
+    .psy{//卡片展示
+        .psy_flex_2{
+            width: 1.66rem;
+            height: 2.2rem;
+            padding:0.1rem;
+            box-shadow: #eceaea 0 0 0.1rem;
+            background-color: #fff;
+            border-radius: 0.04rem;
+            position: relative;
+            img{
+                width: 1.45rem;
+                height: 1.02rem;
+            }
+            .imgtime{
+                position: relative;
+                .livetime{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    background-color: $bgyellow;
+                    height: 0.15rem;
+                    color: #fff;
+                    font-size: 0.1rem;
+                }
+                .liveicon{
+                    background-color: rgba(0, 0, 0, 0.4);
+                    color: #fff;
+                    font-size: 0.1rem;
+                    position: absolute;
+                    right: 0.04rem;
+                    top: 0.12rem;
+                    width: 0.32rem;
+                    line-height: 0.14rem;
+                    height: 0.14rem;
+                    text-align: center;
+                    border-radius: 0.07rem;
+                }
+            }
+
+
+            .coursename{
+                font-size: 0.16rem;
+                color: #333333;
+                padding: 0.1rem 0 0.1rem;
+                @include text-ellipsis;
+                .icon-video{
+                    padding:0 0.04rem;
+                    height: 0.14rem;
+                    color: #fff;
+                    border-radius: 0.07rem;
+                    text-align: center;
+                    font-size: 0.10rem;
+                    background-color: $bgyellow;
+                    float: left;
+                    margin: 0.04rem 0.1rem 0 0;
+                }
+                &.itemcourse{
+                    white-space: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    -webkit-line-clamp: 2;
+                    height: 0.52rem;
+                }
+            }
+            .knowicon{
+                margin-bottom:0.1rem;
+                .knowiconmb0{
+                    margin-bottom: 0;
+                }
+                span{
+                    background-color: rgba(254, 209, 58, 0.2);
+                    color: #fed13a;
+                    padding: 0 0.04rem;
+                    border-radius: 0.04rem;
+                    font-size: 0.12rem;
+                    margin-right: 0.04rem;
+                }
+            }
+            .iteminfo{
+                color: #666666;
+                width: 100%;
+                position: absolute;
+                bottom: 0.1rem;
+                left: 0.1rem;
+                width: 1.45rem;
+                .iteminfo_hidden{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    -webkit-line-clamp: 2;
+                    max-height: 0.32rem;
+                }
+            }
+            .pricedel{
+                height: 0.24rem;
+                line-height: 0.24rem;
+                text-align: right;
+            }
+        }
+
+    }
+    .group{
+        .gamedetails{
+            .itembtn{
+                // width:0.6rem;
+                margin-bottom: 0.42rem;
+            }
+        }
+
+    }
+  .listInfo{
+    height: 100%;
+    position: relative;
+
+  }
+  .iteminfo,.price{
+
+    .money{
+      position: relative;
+      &.free{
+        color: $color;
+      }
+      .oldmoney{
+        line-height: 0.24rem;
+        font-size: 0.11rem;
+        color: #C3C3C3;
+        margin-right:0.06rem;
+      }
+    }
+  }
+}
+
+.game-recommend{
+  padding-top: 0.15rem;
+  .listItem{
+    padding-top: 0;
+    .datetime{
+      padding:0.06rem;
+    }
+    .gametime{
+      position: relative;
+      margin: 0.12rem 0 0.24rem;
+      &:before,&:after{
+        content: "";
+        width: 0.01rem;
+        height: 0.12rem;
+        background-color: #e5e5e5;
+        position: absolute;
+        left: 0.1rem;
+      }
+      &:before{
+        top:-0.12rem;
+      }
+      &:after{
+        bottom:-0.12rem;
+      }
+
+
+      .gamedetails{
+        .iteminfo{
+          position: absolute;
+          width: 1.7rem;
+          bottom: 0.05rem;
+          right:0;
+        }
+      }
+    }
+    .gametime:last-child{
+      margin-bottom: 0.12rem;
+    }
+
+  }
+}

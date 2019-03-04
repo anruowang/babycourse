@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+//超链接默认色及hover
+@mixin link-hover($normal, $hover) {
+    color: $normal; //默认色
+    &:hover {
+        color: $hover;
+    }
+
+}
+
+//按钮混合器默认基本色
+@mixin btn-submit( $btn-width, $btn-height, $btn-radius, $btn-Color, $btn-bgColor) {
+    //$btn-width, $btn-height,$btn-radius $btn-Color, $btn-bgColor,分别对应宽、高、圆角、字体颜色、背景色
+  outline:0 none !important;
+    width: $btn-width;
+    height: $btn-height;
+    line-height: $btn-height;
+    border-radius: $btn-radius;
+    color: $btn-Color;
+    background-color: $btn-bgColor;
+    text-align: center;
+}
+@mixin btn-submit-border( $btn-width, $btn-height, $btn-radius, $btn-Color, $btn-bgColor, $border-color) {
+  //$btn-width, $btn-height,$btn-radius $btn-Color, $btn-bgColor,$border-color分别对应宽、高、圆角、字体颜色、背景色，边的颜色
+  outline:0 none !important;
+  width: $btn-width;
+  height: $btn-height;
+  border-radius: $btn-radius;
+  color: $btn-Color;
+  background-color: $btn-bgColor;
+  border:1px solid  $border-color;
+  text-align: center;
+}
+
+
+//按钮hover
+@mixin btn-submit-hover( $btn-Color, $btn-hover-bg) {
+    // $color, $bgcolor分别对应宽、高、字体颜色、圆角大小、背景色
+    color: $btn-Color;
+    background-color: $btn-hover-bg;
+}
+
+//按钮active
+@mixin btn-submit-active( $btn-Color, $btn-hover-bg) {
+    // $color, $bgcolor分别对应宽、高、字体颜色、圆角大小、背景色
+    color: $btn-Color;
+    background-color: $btn-hover-bg;
+}
+
+
+@mixin btn-font($fs,$lh,$fw){//$fs,$lh,$fw 分别对字体大小，行高，是否加粗
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+}
+
+
+//三角形图标---------只传三角形的边宽：$border-width、颜色：$border-color
+.triangle-icon { //默认长宽为0
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+@mixin triangle-top($border-width,$border-color) { //上三角
+    border-bottom: $border-width solid $border-color ;
+    border-left: $border-width solid transparent;
+    border-right: $border-width solid transparent;
+    @extend .triangle-icon
+}
+
+@mixin triangle-bottom($border-width,$border-color) { //下三角
+    border-top: $border-width solid $border-color;
+    border-left: $border-width solid transparent;
+    border-right: $border-width solid transparent;
+    @extend .triangle-icon
+}
+
+@mixin triangle-left($border-width,$border-color) { //左三角
+    border-right: $border-width solid $border-color;
+    border-top: $border-width solid transparent;
+    border-bottom: $border-width solid transparent;
+    @extend .triangle-icon
+}
+
+@mixin triangle-right($border-width,$border-color) { //右三角
+    border-left: $border-width solid $border-color ;
+    border-top: $border-width solid transparent;
+    border-bottom: $border-width solid transparent;
+    @extend .triangle-icon
+}
+
+@mixin radius($width,$bg-color,$font-color){
+       width: $width;
+       height: $width;
+        background-color: $bg-color;
+        color: $font-color;
+        border-radius: 50%;
+}
+
+// 透明度（0-1）
+@mixin opacity($value) {
+    opacity: $value;
+    -moz-opacity: $value;
+    filter: alpha(opacity=$value*100);
+    //*filter: progid: DXImageTransform . Microsoft . Alpha(opacity=#{$value*100});
+}
+
+//溢出隐藏
+@mixin text-ellipsis () {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

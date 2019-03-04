@@ -1,0 +1,112 @@
+.radio-group {
+  font-size: 0.14rem;
+  height: 0.44rem;
+  line-height: 0.44rem; }
+  .radio-group > span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.16rem;
+    text-align: center;
+    color: #333333;
+    width: 50%; }
+
+.radio-group > span.cur {
+  position: relative;
+  color: #32B182; }
+
+.radio-group > span.cur:before {
+  content: " ";
+  position: absolute;
+  bottom: 0.08rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0.32rem;
+  height: 0.02rem;
+  background: #32B182; }
+
+.head-menu {
+  overflow-x: auto;
+  width: 100%;
+  height: 0.44rem;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 99; }
+  .head-menu .nav {
+    padding: 0 0.15rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0; }
+    .head-menu .nav li {
+      display: inline-block;
+      color: #333;
+      text-align: center;
+      line-height: 0.42rem;
+      height: 0.44rem;
+      font-size: 0.18rem;
+      padding: 0 0.2rem;
+      text-align: center;
+      cursor: pointer; }
+      .head-menu .nav li.active {
+        color: #32B182; }
+        .head-menu .nav li.active:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0.02rem;
+          background-color: #32B182; }
+  .head-menu .tabmenu {
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0;
+    height: 0.44rem;
+    padding: 0 0.1rem;
+    border-bottom: 1px solid #e5e5e5; }
+    .head-menu .tabmenu li {
+      display: inline-block;
+      color: #999;
+      padding: 0 0.2rem;
+      text-align: center;
+      line-height: 0.44rem;
+      font-size: 0.16rem;
+      cursor: pointer; }
+      .head-menu .tabmenu li.now {
+        color: #32B182;
+        position: relative; }
+        .head-menu .tabmenu li.now:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #32B182; }
+  .head-menu .tabmenu2 {
+    white-space: nowrap; }
+    .head-menu .tabmenu2.pd {
+      padding: 0.05rem 0.1rem; }
+    .head-menu .tabmenu2:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .head-menu .tabmenu2 li {
+      color: #999;
+      background-color: #f3f1f1;
+      border-radius: 0.15rem;
+      height: 0.24rem;
+      line-height: 0.24rem;
+      font-size: 0.12rem;
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 0.1rem;
+      text-align: center;
+      margin: 0.03rem 0.05rem; }
+      .head-menu .tabmenu2 li.now {
+        background-color: #fff;
+        border: 1px solid #32B182;
+        border-radius: 0.15rem;
+        line-height: 0.24rem;
+        color: #32B182; }
+
+/*# sourceMappingURL=head_tab.css.map */

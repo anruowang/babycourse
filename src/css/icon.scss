@@ -1,0 +1,163 @@
+@charset "utf-8";
+//all icons
+.icon22x22{
+    display: block;
+    width: 0.22rem;
+    height: 0.22rem;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+//首页ICON
+ .profit-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/houyeweixuanhzong@2x.png");
+ }
+ .profit-icon-active,.active .profit-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/shouyexuanzhong@2x.png");
+ }
+ //小私塾ICON
+ .shop-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/xiaosishuweixuanzhong@2x.png");
+ }
+ .shop-icon-active,.active .shop-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/xiaosishuxuanzhong@2x.png");
+ }
+
+ //亲子课ICON
+ .my-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/qinzikeweixuanhzong@2x.png");
+ }
+ .my-icon-active,.active .my-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/qingzikexuanzhong@2x.png");
+ }
+
+ //个人中心ICON
+ .set-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/wodeweixhuanzhong@2x.png");
+ }
+ .set-icon-active,.active .set-icon{
+     @extend .icon22x22;
+     background-image: url("../assets/wodexuanzhong@2x.png");
+ }
+
+ // 个人中心menu
+ //我的-客服中心ICON
+.cpbg-icon{
+    @extend .icon22x22;
+    background-image: url("../assets/cepingbaogao@2x.png");
+}
+.wdkc-icon{
+    @extend .icon22x22;
+    background-image: url("../assets/wodekecheng@2x.png");
+}
+.wdsc-icon{
+    @extend .icon22x22;
+    background-image: url("../assets/wodeshoucang@2x.png");
+}
+.wdgz-icon{
+    @extend .icon22x22;
+    background-image: url("../assets/wodeguanzhu@2x.png");
+}
+.wdqd-icon{
+    @extend .icon22x22;
+    background-image: url("../assets/wodeqiandao@2x.png");
+}
+
+.coll-icon{
+  color: #b1b1b1;
+  float: left;
+  &:before{
+    content: '';
+    width: 0.18rem;
+    height: 0.18rem;
+    display: block;
+    margin: auto;
+    background: url("../assets/not_coll.png") no-repeat;
+    background-size:100%;
+  }
+  &.iscoll{
+    &:before{
+      background: url("../assets/is_coll.png") no-repeat;
+      background-size:100%;
+    }
+  }
+
+}
+
+.goumai-sub{
+  width: 0.19rem;
+  height: 0.19rem;
+  background:url("../assets/goumaizhuanlangougou@2x.png") no-repeat center;
+  background-size:100% 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.audio-length{
+  background:url("../assets/shijian@2x.png") no-repeat left center;
+  background-size:0.12rem 0.12rem;
+  padding-left:0.18rem;
+  color: #999;
+}
+
+
+.dianzan{
+  background:url("../assets/dianzan.png") no-repeat left center;
+  &.islike{
+    background:url("../assets/dianzan_cur.png") no-repeat left center;
+    background-size:0.14rem 0.14rem;
+    color: #FFB2A0;
+  }
+
+}
+.pinglun{
+  background:url("../assets/pinglun.png") no-repeat left center;
+
+}
+.dianzan,.pinglun{
+  background-size:0.14rem 0.14rem;
+  padding-left:0.2rem;
+  color: #D7D7D7;
+  line-height: 0.14rem;
+}
+
+.play-icon{
+  width: 0.44rem;
+  height: 0.44rem;
+  background:url("../assets/bofang3@2x.png") no-repeat center;
+  background-size:100% 100%;
+}
+
+.v-coll-icon,.v-comment-icon,.v-share-icon,.v-del-icon{
+    width: 0.44rem;
+    height: 0.44rem;
+    display: block;
+    margin: auto;
+}
+.v-coll-icon{
+  background:url("../assets/1dianzan@2x.png") no-repeat center;
+  background-size:100%;
+  &.islike{
+    background:url("../assets/1dianzanliang@2x.png") no-repeat center;
+    background-size:100%;
+  }
+
+}
+.v-comment-icon{
+  background:url("../assets/1pinglun@2x.png") no-repeat center;
+  background-size:100%;
+}
+.v-share-icon{
+  background:url("../assets/1fenxiang@2x.png") no-repeat center;
+  background-size:100%;
+}
+.v-del-icon{
+  background:url("../assets/1shanchu@2x.png") no-repeat center;
+  background-size:100%;
+}

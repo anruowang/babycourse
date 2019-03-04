@@ -1,0 +1,138 @@
+@charset "utf-8";
+@import "../../css/variables";
+@import "../../css/mixin";
+.challenge-main{
+  .ban-pic{
+    width: 3.75rem;
+    height: 2.1rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .introduce{
+    padding: 0.15rem;
+    font-size: 0.14rem;
+    color: #666;
+  }
+  .challenge-list{
+    padding: 0.15rem;
+    .list-title{
+      font-size: 0.2rem;
+      padding-left: 0.1rem;
+      position: relative;
+      &:before{
+        content: "";
+        width: 0.02rem;
+        height: 0.2rem;
+        background-color: $color;
+        position: absolute;
+        left: 0;
+        top:50%;
+        margin-top:-0.1rem;
+      }
+    }
+    .list-body{
+      width: 3.75rem;
+      display: table;
+      overflow-x: auto;
+      white-space: nowrap;
+      font-size: 0;
+      margin-left: -0.1rem;
+      .video-item{
+        margin:  0.1rem;
+        width: 1.32rem;
+        height: 1.43rem;
+        display:inline-block;
+        font-size: 0.12rem;
+        position: relative;
+        background-color: #f6f6f6;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .subtxt{
+          position: absolute;
+          right: 0;
+          top:0;
+          background-color: $color;
+          width: 0.4rem;
+          height: 0.18rem;
+          line-height: 0.18rem;
+          text-align: center;
+          color: #fff;
+          border-radius: 0 0 0 0.05rem;
+        }
+      }
+    }
+  }
+}
+
+
+//.challengebox{
+//  position: relative;
+//  width: 100%;
+//  height: 100%;
+.tools-bar{
+  width: 0.8rem;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0;
+  z-index: 1000;
+  font-size: 0.14rem;
+  color: #fff;
+  text-align: center;
+  li{
+    display: block;
+    margin-bottom:0.15rem;
+  }
+}
+//}
+.comment-bar{
+  position: fixed;
+  bottom:-100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 0.05rem 0.05rem 0 0;
+  width: 100%;
+  height: 75%;
+  z-index: 9999;
+  transition: bottom 0.5s ease;
+  &.show{
+    bottom:0;
+    transition: bottom 0.5s ease;
+  }
+
+  .comment-title{
+    text-indent: 0.15rem;
+    font-size: 0.16rem;
+    height: 0.48rem;
+    line-height: 0.45rem;
+    color: #333;
+    border-bottom: 1px solid #f8f8f8;
+    z-index: 10001;
+
+    .close{
+      float:right;
+      margin: 0.1rem;
+      width: 0.28rem;
+      height: 0.28rem;
+      background: url("../../assets/quxiao0@2x.png") no-repeat center;
+      background-size:0.11rem 0.11rem;
+    }
+  }
+
+  .comment-list{
+    overflow-y: auto;
+  }
+
+  .to-comment{
+     height: 0.45rem;
+    line-height: 0.45rem;
+     text-align: center;
+    color: #fff;
+    background-color:$color;
+    font-size: 0.16rem;
+  }
+}

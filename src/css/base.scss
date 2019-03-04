@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import "variables";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, input, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: arial,PingFang-SC-Regular,helvetica neue,hiragino sans gb,tahoma,microsoft yahei ui,microsoft yahei,simsun,sans-serif;
+    font-size: 0.12rem;
+    color: #333;
+    background-color:#f6f6f6;
+    height: 100%;
+}
+html {
+    -webkit-text-size-adjust: 100%!important;
+    -ms-text-size-adjust: 100%!important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent
+}
+/** 添加chrome浏览器字体控制 **/
+body{
+    -webkit-text-size-adjust:100%!important;
+}
+
+
+em, i {
+    font-style: normal
+}
+
+img {
+    vertical-align: top;
+    border: 0 none;
+    max-width: 100%;
+    -webkit-touch-callout: none
+}
+
+a {
+    -webkit-touch-callout: none;
+    text-decoration: none
+}
+
+a:active {
+    outline: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+    outline: 0
+}
+
+* {
+    -webkit-tap-highlight-color: transparent
+}
+
+input {
+    -webkit-appearance: none
+}
+
+textarea {
+    outline: 0
+}
+
+input, select, textarea {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff
+}
+
+textarea:focus {
+    outline: 0
+}
+
+input:focus {
+    outline: 0
+}
+
+a, button, input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+
+input[type='submit'], button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    border: 0 none
+}
+input::-webkit-input-placeholder {
+  color: #b1b1b1;
+  font-size: 0.14rem;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+.clearfix:after{
+    display:block;
+    clear:both;
+    visibility:hidden;
+    font-size:0;
+    height:0;
+    content:''}
+.clearfix{
+    *zoom:1
+}
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+

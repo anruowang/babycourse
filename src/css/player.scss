@@ -1,0 +1,488 @@
+@charset "utf-8";
+.musicPlayer{
+  position: fixed;
+  height: 0.5rem;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  background-color: #fff;
+  z-index:99;
+  padding:0.05rem 0.15rem;
+  box-shadow: 0.03rem 0 0.03rem rgba(0,0,0,0.1);;
+
+  .musicPic{
+    position:relative;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #eee;
+    border-radius:50%;
+    display: inline-block;
+    vertical-align: middle;
+    .musicAnimation{
+      width: 0.38rem;
+      height: 0.38rem;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      margin-left:-0.18rem;
+      margin-top:-0.18rem;
+      border-radius:50%;
+      z-index: 11;
+    }
+    .smallyuan{
+      background-color: #fff;
+      width: 0.16rem;
+      height: 0.16rem;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      margin-left:-0.08rem;
+      margin-top:-0.08rem;
+      border-radius:50%;
+      z-index: 12;
+      border:0.03rem solid #eee;
+      box-shadow: 0 0 0.03rem rgba(0,0,0,0.3);
+    }
+  }
+
+
+  .musicName{
+    padding:0 0.1rem;
+    font-size:0.13rem;
+    width: 2.1rem;
+    line-height: 0.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .musicPlay{
+    width: 0.24rem;
+    height: 0.24rem;
+    margin: 0.08rem 0 0.08rem 0.06rem;
+    background-image: url(../assets/player/bofang@2x.png);
+    background-size:cover;
+    &.playStop{
+      background-image: url(../assets/player/zanting@2x.png);
+    }
+    float: right;
+  }
+  .musicClose{
+    width: 0.24rem;
+    height: 0.24rem;
+    background-image: url(../assets/player/music_close.png);
+    background-size:cover;
+    margin: 0.08rem 0 0.08rem 0.06rem;
+    float: right;
+  }
+
+
+}
+
+
+#audioplayer{
+  font-family :'Microsoft YaHei','\5FAE\8F6F\96C5\9ED1';
+  font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .player-nav{
+    width: 100%;
+    height: 0.58rem;
+    background:#fff;
+    border-top: 1px #f0f0f0 solid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+    display: table;
+    .coldiv {
+      display: table-cell;
+      width: 33.33333%;
+      height: 0.58rem;
+      .baricon{
+        width: 0.24rem;
+        height: 0.24rem;
+        display: block;
+        margin: 0.05rem auto;
+        &.slist{
+          background: url("../assets/kecheng@2x.png") no-repeat center;
+          background-size:0.24rem 0.24rem;
+        }
+        &.shoucang{
+          background: url("../assets/shoucang2@2x.png") no-repeat center;
+          background-size:0.24rem 0.24rem;
+          &.active{
+            background: url("../assets/shoucang_cur2@2x.png") no-repeat center;
+            background-size:0.24rem 0.24rem;
+          }
+        }
+        &.beishu{
+          background: url("../assets/shoucang2@2x.png") no-repeat center;
+          background-size:0.24rem 0.24rem;
+        }
+      }
+      .bartxt{
+        color: #999;
+        font-size: 0.12rem;
+        line-height: 0.24rem;
+      }
+
+      & > a {
+        display: block;
+        float: right;
+        & > img {
+          margin-top: 8px;
+          width: 40px;
+        }
+      }
+    }
+  }
+  .songListMask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 17, 27, .4);
+    z-index: 99;
+  }
+  .songList {
+    position: fixed;
+    bottom:-100%;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 100;
+
+    //backdrop-filter: blur(10px); /*ios 模糊背景*/
+    .items {
+      background: #ffffff;
+      width: 100%;
+      height: 75%;
+      overflow: auto;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      bottom:-100%;
+      transition: bottom 0.5s ease;
+      .title {
+        width: 100%;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        background: #f9f9f9;
+        border-bottom: 1px #f0f0f0 solid;
+        text-align: center;
+        font-size: 18px;;
+        .close {
+          float: right;
+          width: 0.4rem;
+          & > img {
+            width: 0.4rem;
+          }
+        }
+      }
+    }
+
+    .songListbox{
+      padding-top: 0.1rem;
+      overflow-y: auto;
+      .item {
+        color: #666;
+        padding: 8px 0;
+        display: block;
+        border-bottom: 1px #e5e5e5 solid;
+        margin:0 0.1rem;
+         text-indent: 0.1rem;
+      }
+    }
+    .songListBtn{
+      height: 0.45rem;
+      background-color: #f9f9f9;
+      color: #333;
+      font-size: 0.14rem;
+      line-height: 0.45rem;
+      text-align: center;
+    }
+    &.showList{
+      bottom:0;
+      .items{
+        bottom:0;
+      }
+    }
+  }
+  .playerbox {
+    width: 100%;
+    //background: url("../assets/player/bg.jpg");
+    background: #fff;
+    position: relative;
+    .text {
+      width: 100%;
+      text-align: center;
+      padding-top: 5%;
+      font-size: 30px;
+      span {
+        font-size: 14px;
+        display: block;
+        line-height: 2;
+      }
+
+
+    }
+    .yuanquan{
+      width: 0.9rem;
+      height: 0.9rem;
+      position:absolute;
+      left: 50%;
+      top:50%;
+      border-radius: 50%;
+      margin-top: -0.45rem;
+      margin-left: -0.45rem;
+      background-color: rgba(0,0,0,0.2);
+      z-index: 12;
+      &:before{
+        content: '';
+        width: 0.84rem;
+        height: 0.84rem;
+        background-color: #d0d0d0;
+        position:absolute;
+        left: 50%;
+        top:50%;
+        border-radius: 50%;
+        margin-top: -0.42rem;
+        margin-left: -0.42rem;
+        z-index: 13;
+      }
+      &:after{
+        content: '';
+        width: 0.52rem;
+        height: 0.52rem;
+        background-color: #fff;
+        box-shadow: 0 0 0.05rem #999;
+        position:absolute;
+        left: 50%;
+        top:50%;
+        border-radius: 50%;
+        margin-top: -0.26rem;
+        margin-left: -0.26rem;
+        z-index: 14;
+
+      }
+    }
+
+    @-webkit-keyframes rotation {
+      from {
+        transform: rotate(0deg)
+      }
+      to {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+    .fade-enter-active {
+      transition: all .3s ease
+    }
+    .fade-leave-active {
+      transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .fade-enter, .fade-leave-active {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    .playerbar{
+      width: 100%;
+      height:0.3rem;
+      position:absolute;
+      bottom:1rem;
+    }
+    .audio-player {
+      width: 100%;
+      height:0.68rem;
+      position:absolute;
+      bottom: 0.4rem;
+      font-size: 0;
+      text-align: center;
+      display: flex;
+      .ico {
+        flex: 1;
+        text-align: center;
+        #play {
+          display: none;
+        }
+        #stop {
+        }
+        &.wh20{
+          padding-top: 0.24rem;
+          img{
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        &.wh68{
+          img{
+            width: 0.68rem;
+            height: 0.68rem;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+  .audio-loadtxt{
+    width: 100%;
+    height: 0.2rem;
+    position: fixed;
+    bottom: 0.7rem;
+    left: 0;
+    right: 0;
+    color:#999;
+    z-index: 13;
+    text-align: center;
+  }
+
+}
+
+.audio_bar {
+  border: 1px solid #FF3300;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 9999999;
+}
+
+.audioDrag {
+  background: #99CC00;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9999999;
+}
+
+.audio-pic-box{
+  position: relative;
+  height:4rem;
+  z-index: 9;
+}
+
+.audio-img {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #f6f6f6;
+  margin-top: -1.3rem;
+  margin-left: -1.3rem;
+  position: absolute;
+  outline: none;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  //&.animation{
+  //  animation:changDeg 10s linear 1s infinite;
+  //}
+  & > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 0.05rem;
+  }
+}
+
+.audio-fm{
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  margin-top: -1.3rem;
+  margin-left: -1.3rem;
+  position: absolute;
+  outline: none;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  //-webkit-animation:load 2s linear 1s infinite;
+  //-moz-animation:load 2s linear 1s infinite;
+  //-ms-animation:load 2s linear 1s infinite;
+  //-o-animation:load 2s linear 1s infinite;
+  //animation:load 2s linear 1s infinite;
+  //&.animation{
+  //  -webkit-animation:load 10s linear 1s infinite;
+  //  -moz-animation:load 10s linear 1s infinite;
+  //  -ms-animation:load 10s linear 1s infinite;
+  //  -o-animation:load 10s linear 1s infinite;
+  //  animation:load 10s linear 1s infinite;
+  //}
+}
+
+
+
+
+
+.dragbox {
+  width: 3.1rem;
+  position: relative;
+  height: 0.03rem;
+  background-color: #e0e0e0;
+  border-radius: 0.04rem;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  margin: auto;
+}
+
+.progress {
+  background: #E0E0E0;
+  margin-bottom: 0px;
+  height: 0.03rem;
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+  border-radius: 0.04rem;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.progressbar {
+  background-color: #FED13A;
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+
+.bardrag {
+  position: absolute;
+  top: -0.08rem;
+  left:0;
+  display: inline-block;
+  height: 0.16rem;
+  width: 0.16rem;
+  margin-left:-0.08rem;
+  background-color: #FED13A;
+  border-radius: 0.08rem;
+  cursor: e-resize;
+}
+
+.dragnum {
+  width: 3.1rem;
+  margin: auto;
+  vertical-align: middle;
+  line-height: 0.2rem;
+}
